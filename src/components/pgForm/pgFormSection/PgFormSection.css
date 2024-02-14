@@ -1,0 +1,13 @@
+.pg-form_section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.pg-form_section__title {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin-bottom: 1.75rem;
+}
