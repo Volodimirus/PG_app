@@ -16,3 +16,7 @@ body {
   font-family: inherit;
   line-height: inherit;
 }
+
+fieldset, input, textarea {
+    border: none;
+}
