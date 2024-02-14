@@ -4,10 +4,8 @@ import PgFormSectionField from "./pgFormSectionField/PgFormSectionField";
 
 export default function PgFormSection() {
     return (
-        <fieldset className="pg-form_section">
-            <legend className="pg-form_section__title">
-                personal information
-            </legend>
+        <fieldset className="personal_info d-flex flex-column">
+            <legend className="fs-4 lh-lg">Personal Information</legend>
             <PgFormSectionField
                 type="text"
                 id="lslqzcmc"
