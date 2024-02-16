@@ -1,0 +1,20 @@
+.portfolio_header {
+    padding-left: 2.5rem;
+    background-color: rgb(30, 58, 138);
+    gap: 1.75rem;
+    grid-area: header;
+}
+
+.portfolio_header .name {
+    font-size: 3rem;
+}
+
+.portfolio_header .job {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    font-weight: 500;
+}
+
+.portfolio_header__item {
+    color: rgb(249, 250, 251);
+}
