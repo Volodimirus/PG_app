@@ -1,0 +1,30 @@
+.portfolio_aside {
+    background-color: rgba(209, 213, 219);
+    padding: 1.75rem;
+    grid-area: aside;
+}
+
+.portfolio_aside img {
+    border-radius: 0.5rem;
+}
+
+.portfolio_aside__person_info {
+    gap: 0.75rem;
+}
+
+.portfolio_aside__person_info h3,
+.portfolio_aside__person_info h4 {
+    font-weight: 600;
+}
+
+.portfolio_aside__person_info h4 {
+    color: rgb(31, 41, 55);
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+}
+
+.portfolio_aside__personal_details {
+    color: rgb(30, 58, 138);
+    border-color: rgb(156, 163, 175) !important;
+    font-weight: 600;
+}
