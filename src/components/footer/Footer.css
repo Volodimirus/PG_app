@@ -1,0 +1,28 @@
+.app_footer {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    background-color: rgb(31, 41, 55);
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.app_footer__copyright {
+    color: rgb(249, 250, 251);
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+}
+
+.app_footer__github {
+    width: 2rem;
+    height: 2rem;
+    background-image: url(https://lively-begonia-680727.netlify.app/assets/github-4e4107f7.svg);
+    cursor: pointer;
+    transition: all;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+}
+
+.app_footer__github:hover {
+    opacity: 0.7;
+}
