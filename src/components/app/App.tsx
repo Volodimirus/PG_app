@@ -3,6 +3,7 @@ import "./App.css";
 import Header from "../header/Header";
 import PgForm from "../pgForm/PgForm";
 import Portfolio from "../portfolio/Portfolio";
+import Footer from "../footer/Footer";
 
 function App() {
     return (
@@ -10,6 +11,7 @@ function App() {
             <Header />
             <PgForm />
             <Portfolio />
+            <Footer />
         </div>
     );
 }
