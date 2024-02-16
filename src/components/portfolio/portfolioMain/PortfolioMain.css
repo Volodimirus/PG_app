@@ -1,0 +1,26 @@
+.portfolio_main {
+    background-color: rgb(243, 244, 246);
+    padding: 2.5rem;
+    gap: 2rem;
+    grid-area: main;
+}
+
+.portfolio_main__top {
+    gap: 0.75rem;
+}
+
+.portfolio_main__mid,
+.portfolio_main__bottom {
+    color: rgb(31, 41, 55);
+    gap: 1.25rem;
+}
+
+.portfolio_main .portfolio_main__title {
+    border-color: rgb(209, 213, 219) !important;
+    color: rgb(30, 58, 138);
+    font-weight: 600;
+}
+
+.portfolio_main .portfolio_main__content {
+    color: rgb(31, 41, 55);
+}
