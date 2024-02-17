@@ -1,8 +1,13 @@
 import React from "react";
-import "./PgFormSection.css";
 import PgFormSectionField from "./pgFormSectionField/PgFormSectionField";
+import "./PgFormSection.css";
 
-export default function PgFormSection() {
+/**
+ * Renders the PgFormSection component.
+ * @returns The PgFormSection component.
+ */
+
+export default function PgFormSection(): JSX.Element {
     return (
         <fieldset className="personal_info d-flex flex-column">
             <legend className="fs-4 lh-lg">Personal Information</legend>
