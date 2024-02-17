@@ -1,7 +1,12 @@
 import React from "react";
 import "./PortfolioAside.css";
 
-export default function PortfolioAside() {
+/**
+ * Renders the portfolio aside with personal details of the user.
+ * @returns The portfolio aside component.
+ */
+
+export default function PortfolioAside(): JSX.Element {
     return (
         <aside className="portfolio_aside d-flex flex-column gap-4">
             <img
