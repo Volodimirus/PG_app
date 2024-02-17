@@ -5,6 +5,9 @@ import PgForm from "../pgForm/PgForm";
 import Portfolio from "../portfolio/Portfolio";
 import Footer from "../footer/Footer";
 
+// Renders the main application component.
+// @returns The main application component.
+
 function App() {
     return (
         <div className="app min-vh-100 d-flex flex-column align-items-center gap-5">
