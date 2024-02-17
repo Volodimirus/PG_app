@@ -5,8 +5,10 @@ import Portfolio from "../portfolio/Portfolio";
 import Footer from "../footer/Footer";
 import "./App.css";
 
-// Renders the main application component.
-// @returns The main application component.
+/**
+ * Renders the main application component.
+ * @returns The main application component.
+ */
 
 function App(): JSX.Element {
     return (
