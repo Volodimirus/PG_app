@@ -1,7 +1,12 @@
 import React from "react";
 import "./PortfolioMain.css";
 
-export default function PortfolioMain() {
+/**
+ * Renders the portfolio main content with the portfolio details.
+ * @returns The portfolio main content component.
+ */
+
+export default function PortfolioMain(): JSX.Element {
     return (
         <div className="portfolio_main d-flex flex-column">
             <div className="portfolio_main__top d-flex flex-column">
