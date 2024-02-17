@@ -7,7 +7,13 @@ interface Props {
     placeholder: string;
 }
 
-export default function PgFormSectionField(props: Props) {
+/**
+ * Renders a form field for a section in a form.
+ * @param props - The properties of field, including its type, ID, name and placeholder.
+ * @returns The form field, which can be a text area or input element.
+ */
+
+export default function PgFormSectionField(props: Props): JSX.Element {
     const { type, id, name, placeholder } = props;
 
     return (
