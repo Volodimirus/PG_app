@@ -1,5 +1,6 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
+import "@testing-library/jest-dom";
 import PgFormSectionField from "./PgFormSectionField";
 
 describe("PgFormSectionField", () => {
@@ -36,9 +37,7 @@ describe("PgFormSectionField", () => {
             />
         );
 
-        const textarea = screen.getByRole("textbox", {
-            name: "test placeholder",
-        });
+        const textarea = screen.getByPlaceholderText('test-placeholder');
 
         expect(textarea).toBeInTheDocument();
         expect(textarea).toHaveAttribute("id", "test-id");
@@ -90,7 +89,7 @@ describe("PgFormSectionField", () => {
 
         render(
             <PgFormSectionField
-                type="text"
+                type="textarea"
                 name="test-name"
                 id="test-id"
                 placeholder={placeholder}
@@ -115,5 +114,23 @@ describe("PgFormSectionField", () => {
         const input = screen.getByRole("textbox");
 
         expect(input).toHaveClass("w-100 fs-5");
+    });
+
+    it("has a style attribute that includes the lineHeight, and borderRadius", () => {
+        render(
+            <PgFormSectionField
+                type="text"
+                id="test-id"
+                name="test-name"
+                placeholder="test-placeholder"
+            />
+        );
+
+        const input = screen.getByRole("textbox");
+
+        expect(input).toHaveStyle({
+            lineHeight: "1.75rem",
+            borderRadius: "0.5rem",
+        });
     });
 });
