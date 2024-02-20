@@ -11,7 +11,6 @@ describe("PgFormSectionField", () => {
                 name="test-name"
                 placeholder="test-placeholder"
                 type="textarea"
-                onChange={onChange}
             />
         );
 
@@ -27,7 +26,6 @@ describe("PgFormSectionField", () => {
                 name="test-name"
                 placeholder="test-placeholder"
                 type="text"
-                onChange={onChange}
             />
         );
 

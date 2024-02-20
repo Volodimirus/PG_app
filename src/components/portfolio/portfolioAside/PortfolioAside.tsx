@@ -1,26 +1,16 @@
 import React from "react";
-import { PortfolioAsideProps } from "./PortfolioAsideProps";
 import "./PortfolioAside.css";
 
 /**
  * Renders the portfolio aside with personal details of the user.
- * @param props The portfolio aside props including the photo, address, phone and email of the user.
  * @returns The portfolio aside component.
  */
 
-export default function PortfolioAside(
-    props: PortfolioAsideProps
-): JSX.Element {
-    const { photo, address, phone, email } = props;
-
+export default function PortfolioAside(): JSX.Element {
     return (
         <aside className="portfolio_aside d-flex flex-column gap-4">
             <img
-                src={
-                    photo
-                        ? photo
-                        : "https://lively-begonia-680727.netlify.app/assets/avatar-placeholder-c2326214.png"
-                }
+                src="https://lively-begonia-680727.netlify.app/assets/avatar-placeholder-c2326214.png"
                 alt="user avatar"
             />
             <div className="portfolio_aside__person_info d-flex flex-column">
@@ -30,15 +20,15 @@ export default function PortfolioAside(
                 </h3>
                 <h4 className="portfolio_aside__address">
                     Address
-                    <div className="fs-6 lh-base fw-normal">{address}</div>
+                    <div className="fs-6 lh-base fw-normal"></div>
                 </h4>
                 <h4 className="portfolio_aside__phone">
                     Phone number
-                    <div className="fs-6 lh-base fw-normal">{phone}</div>
+                    <div className="fs-6 lh-base fw-normal"></div>
                 </h4>
                 <h4 className="portfolio_aside__email">
                     Email
-                    <div className="fs-6 lh-base fw-normal">{email}</div>
+                    <div className="fs-6 lh-base fw-normal"></div>
                 </h4>
             </div>
         </aside>
