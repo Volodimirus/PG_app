@@ -10,17 +10,29 @@ import "./App.css";
  * @returns The main application component.
  */
 
+interface personalDetailsTypes {
+    firstName: string;
+    secondName: string;
+    jobTitle: string;
+    photo: string;
+    address: string;
+    phone: string;
+    email: string;
+    about: string;
+}
+
 function App(): JSX.Element {
-    const [personalDetails, setPersonalDetails] = useState({
-        firstName: "",
-        secondName: "",
-        jobTitle: "",
-        photo: "",
-        address: "",
-        phone: "",
-        email: "",
-        about: "",
-    });
+    const [personalDetails, setPersonalDetails] =
+        useState<personalDetailsTypes>({
+            firstName: "",
+            secondName: "",
+            jobTitle: "",
+            photo: "",
+            address: "",
+            phone: "",
+            email: "",
+            about: "",
+        });
 
     const setFirstName = (firstName: string) =>
         setPersonalDetails({ ...personalDetails, firstName });
