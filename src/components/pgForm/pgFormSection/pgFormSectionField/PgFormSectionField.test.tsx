@@ -4,13 +4,14 @@ import PgFormSectionField from "./PgFormSectionField";
 
 describe("PgFormSectionField", () => {
     it("renders a textarea element when type is textarea", () => {
-        const onChange = jest.fn();
+        const dispatchAction = jest.fn();
         render(
             <PgFormSectionField
                 id="test-id"
                 name="test-name"
                 placeholder="test-placeholder"
                 type="textarea"
+                action={dispatchAction}
             />
         );
 
@@ -19,13 +20,14 @@ describe("PgFormSectionField", () => {
     });
 
     it("renders an input element when type is not textarea", () => {
-        const onChange = jest.fn();
+        const dispatchAction = jest.fn();
         render(
             <PgFormSectionField
                 id="test-id"
                 name="test-name"
                 placeholder="test-placeholder"
                 type="text"
+                action={dispatchAction}
             />
         );
 

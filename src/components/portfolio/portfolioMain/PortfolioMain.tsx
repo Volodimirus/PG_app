@@ -1,4 +1,6 @@
 import React from "react";
+import type { RootState } from "../../../redux/store";
+import { useSelector } from "react-redux";
 import "./PortfolioMain.css";
 
 /**
@@ -7,13 +9,17 @@ import "./PortfolioMain.css";
  */
 
 export default function PortfolioMain(): JSX.Element {
+    const { about } = useSelector((state: RootState) => state.personalInfo);
+
     return (
         <div className="portfolio_main d-flex flex-column">
             <div className="portfolio_main__top d-flex flex-column">
                 <h3 className="portfolio_main__title border-bottom fs-4 lh-lg">
                     About
                 </h3>
-                <span className="portfolio_main__content fst-italic">-</span>
+                <span className="portfolio_main__content fst-italic">
+                    {about ? about : "-"}
+                </span>
             </div>
             <div className="portfolio_main__mid d-flex flex-column">
                 <h3 className="portfolio_main__title border-bottom fs-4 lh-lg">

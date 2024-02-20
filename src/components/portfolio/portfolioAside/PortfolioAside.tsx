@@ -1,4 +1,6 @@
 import React from "react";
+import type { RootState } from "../../../redux/store";
+import { useSelector } from "react-redux";
 import "./PortfolioAside.css";
 
 /**
@@ -7,6 +9,10 @@ import "./PortfolioAside.css";
  */
 
 export default function PortfolioAside(): JSX.Element {
+    const { address, phone, email } = useSelector(
+        (state: RootState) => state.personalInfo
+    );
+
     return (
         <aside className="portfolio_aside d-flex flex-column gap-4">
             <img
@@ -20,15 +26,15 @@ export default function PortfolioAside(): JSX.Element {
                 </h3>
                 <h4 className="portfolio_aside__address">
                     Address
-                    <div className="fs-6 lh-base fw-normal"></div>
+                    <div className="fs-6 lh-base fw-normal">{address}</div>
                 </h4>
                 <h4 className="portfolio_aside__phone">
                     Phone number
-                    <div className="fs-6 lh-base fw-normal"></div>
+                    <div className="fs-6 lh-base fw-normal">{phone}</div>
                 </h4>
                 <h4 className="portfolio_aside__email">
                     Email
-                    <div className="fs-6 lh-base fw-normal"></div>
+                    <div className="fs-6 lh-base fw-normal">{email}</div>
                 </h4>
             </div>
         </aside>
