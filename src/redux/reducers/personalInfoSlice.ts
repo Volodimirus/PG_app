@@ -48,6 +48,9 @@ export const personalInfoSlice = createSlice({
         setEmail: (state, action: PayloadAction<string>) => {
             state.email = action.payload;
         },
+        setAbout: (state, action: PayloadAction<string>) => {
+            state.about = action.payload;
+        },
     },
 });
 
@@ -59,6 +62,7 @@ export const {
     setAddress,
     setPhone,
     setEmail,
+    setAbout,
 } = personalInfoSlice.actions;
 
 export default personalInfoSlice.reducer;
