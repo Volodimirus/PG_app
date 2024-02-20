@@ -21,6 +21,14 @@ interface personalDetailsTypes {
     about: string;
 }
 
+interface experienceDetailsTypes {
+    position: string;
+    company: string;
+    city: string;
+    fromYear: number;
+    toYear: number;
+}
+
 function App(): JSX.Element {
     const [personalDetails, setPersonalDetails] =
         useState<personalDetailsTypes>({
@@ -32,6 +40,15 @@ function App(): JSX.Element {
             phone: "",
             email: "",
             about: "",
+        });
+
+    const [experienceDetails, setExperienceDetails] =
+        useState<experienceDetailsTypes>({
+            position: "",
+            company: "",
+            city: "",
+            fromYear: 0,
+            toYear: 0,
         });
 
     const setFirstName = (firstName: string) =>
