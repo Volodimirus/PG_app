@@ -19,6 +19,7 @@ body {
 
 fieldset,
 input,
-textarea {
+textarea,
+button {
     border: none;
 }
