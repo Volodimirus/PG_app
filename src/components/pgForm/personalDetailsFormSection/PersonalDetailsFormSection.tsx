@@ -1,5 +1,5 @@
 import React from "react";
-import PersonalDetailsFormSectionField from "./personalDetailsFormSectionField/PersonalDetailsFormSectionField";
+import PersonalDetailsFormSectionField from "../formSectionField/FormSectionField";
 import {
     setFirstName,
     setSecondName,
