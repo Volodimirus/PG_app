@@ -1,6 +1,6 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import PgFormSectionField from "./PgFormSectionField";
+import PgFormSectionField from "./PersonalDetailsFormSectionField";
 
 describe("PgFormSectionField", () => {
     it("renders a textarea element when type is textarea", () => {

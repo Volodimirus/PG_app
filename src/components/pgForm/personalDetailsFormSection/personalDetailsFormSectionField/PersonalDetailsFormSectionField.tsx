@@ -15,7 +15,7 @@ interface Props {
  * @returns The form field, which can be a text area or input element.
  */
 
-export default function PgFormSectionField(props: Props): JSX.Element {
+export default function PersonalDetailsFormSectionField(props: Props): JSX.Element {
     const { type, id, name, placeholder, action } = props;
     const dispatch = useDispatch();
 

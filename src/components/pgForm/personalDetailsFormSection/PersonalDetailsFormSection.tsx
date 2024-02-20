@@ -1,5 +1,5 @@
 import React from "react";
-import PgFormSectionField from "./pgFormSectionField/PgFormSectionField";
+import PersonalDetailsFormSectionField from "./personalDetailsFormSectionField/PersonalDetailsFormSectionField";
 import {
     setFirstName,
     setSecondName,
@@ -10,67 +10,67 @@ import {
     setPhoto,
     setAbout,
 } from "../../../redux/reducers/personalInfoSlice";
-import "./PgFormSection.css";
+import "./PersonalDetailsFormSection.css";
 
 /**
  * Renders the PgFormSection component.
  * @returns The PgFormSection component.
  */
 
-export default function PgFormSection(): JSX.Element {
+export default function PersonalDetailsFormSection(): JSX.Element {
     return (
         <fieldset className="personal_info d-flex flex-column">
             <legend className="fs-4 lh-lg">Personal Information</legend>
-            <PgFormSectionField
+            <PersonalDetailsFormSectionField
                 type="text"
                 id="lslqzcmc"
                 name="firstName"
                 placeholder="First Name"
                 action={setFirstName}
             />
-            <PgFormSectionField
+            <PersonalDetailsFormSectionField
                 type="text"
                 id="lslqzcmd"
                 name="lastName"
                 placeholder="Last Name"
                 action={setSecondName}
             />
-            <PgFormSectionField
+            <PersonalDetailsFormSectionField
                 type="text"
                 id="lslqzcme"
                 name="jobTitle"
                 placeholder="Job Title"
                 action={setJobTitle}
             />
-            <PgFormSectionField
+            <PersonalDetailsFormSectionField
                 type="url"
                 id="lslqzcmf"
                 name="photo"
                 placeholder="Your photo (URL)"
                 action={setPhoto}
             />
-            <PgFormSectionField
+            <PersonalDetailsFormSectionField
                 type="text"
                 id="lslqzcmg"
                 name="address"
                 placeholder="Address"
                 action={setAddress}
             />
-            <PgFormSectionField
+            <PersonalDetailsFormSectionField
                 type="tel"
                 id="lslqzcmh"
                 name="phone"
                 placeholder="Phone Number"
                 action={setPhone}
             />
-            <PgFormSectionField
+            <PersonalDetailsFormSectionField
                 type="email"
                 id="lslqzcmi"
                 name="email"
                 placeholder="Email"
                 action={setEmail}
             />
-            <PgFormSectionField
+            <PersonalDetailsFormSectionField
                 type="textarea"
                 id="lslqzcmj"
                 name="about"
