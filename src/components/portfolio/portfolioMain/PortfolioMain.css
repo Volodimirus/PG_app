@@ -15,12 +15,26 @@
     gap: 1.25rem;
 }
 
-.portfolio_main .portfolio_main__title {
+.portfolio_main__title {
     border-color: rgb(209, 213, 219) !important;
     color: rgb(30, 58, 138);
     font-weight: 600;
 }
 
-.portfolio_main .portfolio_main__content {
+.portfolio_main__content {
     color: rgb(31, 41, 55);
+}
+
+.experience__years {
+    font-weight: 600;
+    width: 11rem;
+}
+
+.experience__job {
+    line-height: 1.75rem;
+    font-weight: 600;
+}
+
+.experience__city_and_company {
+    line-height: 1.75rem;
 }
