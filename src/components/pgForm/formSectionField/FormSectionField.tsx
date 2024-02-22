@@ -28,7 +28,14 @@ export default function FormSectionField(props: Props): JSX.Element {
                     placeholder={placeholder}
                     className="w-100 fs-5 py-2 px-3 rounded-4"
                     style={{ lineHeight: "1.75rem", borderRadius: "0.5rem" }}
-                    onChange={(e) => dispatch(action(e.target.value))}
+                    onChange={(e) => {
+                        if (action() == undefined) {
+                            action(e.target.value)
+                        } else {
+                            dispatch(action(e.target.value));
+                        }
+                    }}
+                    required
                 ></textarea>
             ) : (
                 <input
@@ -38,7 +45,14 @@ export default function FormSectionField(props: Props): JSX.Element {
                     placeholder={placeholder}
                     className="w-100 fs-5 py-2 px-3 rounded-4"
                     style={{ lineHeight: "1.75rem", borderRadius: "0.5rem" }}
-                    onChange={(e) => dispatch(action(e.target.value))}
+                    onChange={(e) => {
+                        if (action() == undefined) {
+                            action(e.target.value);
+                        } else {
+                            dispatch(action(e.target.value));
+                        }
+                    }}
+                    required
                 />
             )}
         </>
