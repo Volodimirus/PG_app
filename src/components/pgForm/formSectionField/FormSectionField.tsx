@@ -30,8 +30,10 @@ export default function FormSectionField(props: Props): JSX.Element {
                     style={{ lineHeight: "1.75rem", borderRadius: "0.5rem" }}
                     onChange={(e) => {
                         if (action() == undefined) {
-                            action(e.target.value)
+                            // For experience and education fieldset.
+                            action(e.target.value);
                         } else {
+                            // For personal details fieldset.
                             dispatch(action(e.target.value));
                         }
                     }}
@@ -47,8 +49,10 @@ export default function FormSectionField(props: Props): JSX.Element {
                     style={{ lineHeight: "1.75rem", borderRadius: "0.5rem" }}
                     onChange={(e) => {
                         if (action() == undefined) {
+                            // For experience and education fieldset.
                             action(e.target.value);
                         } else {
+                            // For personal details fieldset.
                             dispatch(action(e.target.value));
                         }
                     }}
