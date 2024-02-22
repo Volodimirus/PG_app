@@ -11,6 +11,7 @@ import "./PortfolioMain.css";
 export default function PortfolioMain(): JSX.Element {
     const { about } = useSelector((state: RootState) => state.personalInfo);
     const { experience } = useSelector((state: RootState) => state.experience);
+    const { education } = useSelector((state: RootState) => state.education);
 
     return (
         <div className="portfolio_main d-flex flex-column">
@@ -29,25 +30,25 @@ export default function PortfolioMain(): JSX.Element {
                 <span className="portfolio_main__content">
                     {experience.length
                         ? experience.map((item, i: number) => {
-                              return (
-                                  <div
-                                      className="experience d-flex gap-5"
-                                      key={i}
-                                  >
-                                      <p className="experience__years fs-5 lh">
-                                          {item?.fromYear} - {item?.toYear}
-                                      </p>
-                                      <div className="d-flex flex-column gap-2">
-                                          <h4 className="experience__job fs-5">
-                                              {item?.position}
-                                          </h4>
-                                          <p className="experience__city_and_company fs-5">
-                                              {item?.company}, {item?.city}
-                                          </p>
-                                      </div>
-                                  </div>
-                              );
-                          })
+                            return (
+                                <div
+                                    className="experience d-flex gap-5"
+                                    key={i}
+                                >
+                                    <p className="experience__years fs-5">
+                                        {item?.fromYear} - {item?.toYear}
+                                    </p>
+                                    <div className="d-flex flex-column gap-2">
+                                        <h4 className="experience__job fs-5">
+                                            {item?.position}
+                                        </h4>
+                                        <p className="experience__city_and_company fs-5">
+                                            {item?.company}, {item?.city}
+                                        </p>
+                                    </div>
+                                </div>
+                            );
+                        })
                         : "-"}
                 </span>
             </div>
@@ -55,7 +56,21 @@ export default function PortfolioMain(): JSX.Element {
                 <h3 className="portfolio_main__title border-bottom fs-4 lh-lg">
                     Education
                 </h3>
-                <span className="portfolio_main__content">-</span>
+                <span className="portfolio_main__content">
+                    {education.length ? education.map((item, i) => {
+                        return (<div className="education d-flex gap-5" key={i}>
+                            <p className="education__years fs-5">{item?.fromYear} - {item?.toYear}</p>
+                            <div className="d-flex flex-column gap-2">
+                                <h4 className="education__univercity_and_city">
+                                    {item?.univercity ? item.univercity : "univercity"},
+                                    {item?.city ? item.city : "city"}
+                                </h4>
+                                <p className="education__degree fs-5">Degree: {item?.degree ? item.subject : "-"}</p>
+                                <p className="education__subject fs-5">Subject: {item?.subject ? item.subject : "-"}</p>
+                            </div>
+                        </div>)
+                    }) : "-"}
+                </span>
             </div>
         </div>
     );
