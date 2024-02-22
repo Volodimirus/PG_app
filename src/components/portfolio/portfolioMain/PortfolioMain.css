@@ -25,16 +25,20 @@
     color: rgb(31, 41, 55);
 }
 
-.experience__years {
+.experience__years,
+.education__years {
     font-weight: 600;
     width: 11rem;
 }
 
-.experience__job {
+.experience__job,
+.education__univercity_and_city {
     line-height: 1.75rem;
     font-weight: 600;
 }
 
-.experience__city_and_company {
-    line-height: 1.75rem;
+.experience__city_and_company,
+.education__degree,
+.education__subject {
+    line-height: 1.5rem;
 }
