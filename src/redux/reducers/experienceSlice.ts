@@ -1,54 +1,67 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
+/**
+ * The interface for the state of the experience slice.
+ */
 export interface ExperienceState {
-    experienceItem: {
-        position: string;
-        company: string;
-        city: string;
-        fromYear: number;
-        toYear: number;
-    };
+    experience: [ExperienceItemState?];
 }
 
+/**
+ * The interface for the state of the experience item.
+ */
+export interface ExperienceItemState {
+    position: string;
+    company: string;
+    city: string;
+    fromYear: number;
+    toYear: number;
+}
+
+/**
+ * The initial state of the experience slice.
+ */
 const initialState: ExperienceState = {
-    experienceItem: {
-        position: "",
-        company: "",
-        city: "",
-        fromYear: 0,
-        toYear: 0,
-    },
+    experience: [],
 };
 
+/**
+ * Creates the experience slice.
+ */
 export const experienceSlice = createSlice({
     name: "experience",
     initialState,
     reducers: {
-        setPosition: (
-            state: ExperienceState,
-            action: PayloadAction<string>
+        /**
+         * Adds an experience item to the state.
+         * @param state The current state.
+         * @param action The action payload containing the new experience item.
+         */
+        setExperienceItem: (
+            state,
+            action: PayloadAction<ExperienceItemState>
         ) => {
-            state.experienceItem.position = action.payload;
+            state.experience.push(action.payload);
         },
-        setCompany: (state: ExperienceState, action: PayloadAction<string>) => {
-            state.experienceItem.company = action.payload;
-        },
-        setCity: (state: ExperienceState, action: PayloadAction<string>) => {
-            state.experienceItem.city = action.payload;
-        },
-        setFromYear: (
-            state: ExperienceState,
-            action: PayloadAction<number>
-        ) => {
-            state.experienceItem.fromYear = action.payload;
-        },
-        setToYear: (state: ExperienceState, action: PayloadAction<number>) => {
-            state.experienceItem.toYear = action.payload;
+
+        /**
+         * Deletes an experience item from the state.
+         * @param state The current state.
+         * @param action The action payload containing the index of the experience item to delete.
+         */
+        deleteExperienceItem: (state, action: PayloadAction<number>) => {
+            state.experience.splice(action.payload, 1);
         },
     },
 });
 
-export const { setPosition, setCompany, setCity, setFromYear, setToYear } =
+/**
+ * Actions for the experience slice.
+ */
+export const { setExperienceItem, deleteExperienceItem } =
     experienceSlice.actions;
 
+/**
+ * Reducer for the experience slice.
+ */
 export default experienceSlice.reducer;
