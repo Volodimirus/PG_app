@@ -9,14 +9,18 @@ import "./PortfolioAside.css";
  */
 
 export default function PortfolioAside(): JSX.Element {
-    const { address, phone, email } = useSelector(
+    const { address, phone, email, photo } = useSelector(
         (state: RootState) => state.personalInfo
     );
 
     return (
         <aside className="portfolio_aside d-flex flex-column gap-4">
             <img
-                src="https://lively-begonia-680727.netlify.app/assets/avatar-placeholder-c2326214.png"
+                src={
+                    photo
+                        ? photo
+                        : "https://lively-begonia-680727.netlify.app/assets/avatar-placeholder-c2326214.png"
+                }
                 alt="user avatar"
             />
             <div className="portfolio_aside__person_info d-flex flex-column">
