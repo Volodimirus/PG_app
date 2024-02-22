@@ -1,6 +1,7 @@
 import React from "react";
 import PersonalDetailsFormSection from "./personalDetailsFormSection/PersonalDetailsFormSection";
 import ExperienceFormSection from "./experienceFormSection/ExperienceFormSection";
+import EducationDetailsFormSection from "./educationDetailsFormSection/EducationDetailsForm";
 import "./PgForm.css";
 
 /**
@@ -10,9 +11,10 @@ import "./PgForm.css";
 
 export default function PgForm(): JSX.Element {
     return (
-        <form name="pg" className="pg-form w-100 shadow-lg d-flex flex-column">
+        <form name="pg" className="pg_form w-100 shadow-lg d-flex flex-column">
             <PersonalDetailsFormSection />
             <ExperienceFormSection />
+            <EducationDetailsFormSection />
         </form>
     );
 }

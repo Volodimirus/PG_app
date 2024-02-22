@@ -1,9 +1,8 @@
-import React from "react";
+import React, { useId } from "react";
 import { useDispatch } from "react-redux";
 
 interface Props {
     type: string;
-    id: string;
     name: string;
     placeholder: string;
     action: Function;
@@ -11,13 +10,14 @@ interface Props {
 
 /**
  * Renders a form field for a section in a form.
- * @param props - The properties of field, including its type, ID, name, placeholder and reducer action.
+ * @param props - The properties of field, including its type, name, placeholder and reducer action.
  * @returns The form field, which can be a text area or input element.
  */
 
 export default function FormSectionField(props: Props): JSX.Element {
-    const { type, id, name, placeholder, action } = props;
+    const { type, name, placeholder, action } = props;
     const dispatch = useDispatch();
+    const id = useId();
 
     return (
         <>

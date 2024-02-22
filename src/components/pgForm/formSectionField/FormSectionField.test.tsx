@@ -7,7 +7,6 @@ describe("PgFormSectionField", () => {
         const dispatchAction = jest.fn();
         render(
             <PgFormSectionField
-                id="test-id"
                 name="test-name"
                 placeholder="test-placeholder"
                 type="textarea"
@@ -23,7 +22,6 @@ describe("PgFormSectionField", () => {
         const dispatchAction = jest.fn();
         render(
             <PgFormSectionField
-                id="test-id"
                 name="test-name"
                 placeholder="test-placeholder"
                 type="text"

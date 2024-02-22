@@ -1,9 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useId } from "react";
 import FormSectionField from "../formSectionField/FormSectionField";
 import { setExperienceItem } from "../../../redux/reducers/experienceSlice";
 import { ExperienceItemState } from "../../../redux/reducers/experienceSlice";
 import { useDispatch } from "react-redux";
-import "./ExperienceFormSection.css";
 
 export default function ExperienceFormSection(): JSX.Element {
     const dispatch = useDispatch();
@@ -19,7 +18,7 @@ export default function ExperienceFormSection(): JSX.Element {
     const [isOpen, toggleOpen] = useState<boolean>(false);
 
     return (
-        <fieldset className="experience d-flex flex-column">
+        <fieldset className="pg_form__section experience d-flex flex-column">
             <legend className="fs-4 lh-lg">Experience</legend>
             {isOpen ? (
                 <>
@@ -27,7 +26,6 @@ export default function ExperienceFormSection(): JSX.Element {
                         type="text"
                         name="position"
                         placeholder="Position"
-                        id="751cfacc"
                         action={(value: string) => {
                             setExperienceDetails({
                                 ...experienceDetails,
@@ -39,7 +37,6 @@ export default function ExperienceFormSection(): JSX.Element {
                         type="text"
                         name="company"
                         placeholder="Company"
-                        id="4f245f8c"
                         action={(value: string) =>
                             setExperienceDetails({
                                 ...experienceDetails,
@@ -51,7 +48,6 @@ export default function ExperienceFormSection(): JSX.Element {
                         type="text"
                         name="city"
                         placeholder="City"
-                        id="aa4e795b"
                         action={(value: string) =>
                             setExperienceDetails({
                                 ...experienceDetails,
@@ -63,7 +59,6 @@ export default function ExperienceFormSection(): JSX.Element {
                         type="number"
                         name="fromYear"
                         placeholder="From (year)"
-                        id="702cecf1"
                         action={(value: string) =>
                             setExperienceDetails({
                                 ...experienceDetails,
@@ -75,7 +70,6 @@ export default function ExperienceFormSection(): JSX.Element {
                         type="number"
                         name="toYear"
                         placeholder="To (year)"
-                        id="495ebd24"
                         action={(value: string) =>
                             setExperienceDetails({
                                 ...experienceDetails,
