@@ -1,5 +1,8 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
+/**
+ * The interface of the personal information slice
+ */
 export interface PersonalInfoState {
     firstName: string;
     secondName: string;
@@ -8,9 +11,12 @@ export interface PersonalInfoState {
     address: string;
     phone: string;
     email: string;
-    about: string;
+    about: string; // A short bio about the user.
 }
 
+/**
+ * The initial state of the personal information slice.
+ */
 const initialState: PersonalInfoState = {
     firstName: "",
     secondName: "",
@@ -22,6 +28,9 @@ const initialState: PersonalInfoState = {
     about: "",
 };
 
+/**
+ * Creates the personal information slice.
+ */
 export const personalInfoSlice = createSlice({
     name: "personalInfo",
     initialState,
@@ -53,6 +62,9 @@ export const personalInfoSlice = createSlice({
     },
 });
 
+/**
+ * The actions available for modifying the personal information state.
+ */
 export const {
     setFirstName,
     setSecondName,
@@ -64,4 +76,7 @@ export const {
     setAbout,
 } = personalInfoSlice.actions;
 
+/**
+ * The reducer for the personal information state.
+ */
 export default personalInfoSlice.reducer;
