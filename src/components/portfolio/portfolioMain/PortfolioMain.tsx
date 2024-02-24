@@ -62,7 +62,7 @@ export default function PortfolioMain(): JSX.Element {
                             <p className="education__years fs-5">{item?.fromYear} - {item?.toYear}</p>
                             <div className="d-flex flex-column gap-2">
                                 <h4 className="education__univercity_and_city">
-                                    {item?.univercity ? item.univercity : "univercity"},
+                                    {item?.university ? item.university : "univercity"},
                                     {item?.city ? item.city : "city"}
                                 </h4>
                                 <p className="education__degree fs-5">Degree: {item?.degree ? item.subject : "-"}</p>
