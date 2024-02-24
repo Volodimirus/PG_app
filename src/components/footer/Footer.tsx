@@ -12,7 +12,7 @@ export default function Footer(): JSX.Element {
             <span className="app_footer__copyright">
                 Copyright © 2024 Vladimir Ekimtsov
             </span>
-            <a className="app_footer__github d-block" href="https://github.com/Volodimirus/"></a>
+            <a className="app_footer__github d-block" href="https://github.com/Volodimirus/" target="_blank"></a>
         </footer>
     );
 }
