@@ -11,7 +11,7 @@ export interface EducationState {
  * Interface for the state of the education item.
  */
 export interface EducationItemState {
-    univercity: string;
+    university: string;
     city: string;
     degree: string;
     subject: string;
