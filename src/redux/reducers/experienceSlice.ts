@@ -52,13 +52,20 @@ export const experienceSlice = createSlice({
         deleteExperienceItem: (state, action: PayloadAction<number>) => {
             state.experience.splice(action.payload, 1);
         },
+        /**
+         * Resets the state of the experience slice to its initial state.
+         * @param state The current state.
+         */
+        resetExperience: (state) => {
+            state.experience = initialState.experience;
+        },
     },
 });
 
 /**
  * Actions for the experience slice.
  */
-export const { setExperienceItem, deleteExperienceItem } =
+export const { setExperienceItem, deleteExperienceItem, resetExperience } =
     experienceSlice.actions;
 
 /**

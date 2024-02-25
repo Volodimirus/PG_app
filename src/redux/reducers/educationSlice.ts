@@ -49,13 +49,21 @@ const educationSlice = createSlice({
         deleteEducation: (state, action: PayloadAction<number>) => {
             state.education.splice(action.payload, 1);
         },
+        /**
+         * Resets the experience slice to its initial state.
+         * @param state The current state.
+         */
+        resetEducation: (state) => {
+            state.education = initialState.education;
+        },
     },
 });
 
 /**
  * The actions for the experience slice.
  */
-export const { addEducation, deleteEducation } = educationSlice.actions;
+export const { addEducation, deleteEducation, resetEducation } =
+    educationSlice.actions;
 
 /**
  * The reducer for the experience slice.

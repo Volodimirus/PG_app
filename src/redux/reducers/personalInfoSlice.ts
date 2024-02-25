@@ -59,6 +59,20 @@ export const personalInfoSlice = createSlice({
         setAbout: (state, action: PayloadAction<string>) => {
             state.about = action.payload;
         },
+        /**
+         * Resets the state of the personal information slice to its initial state.
+         * @param state The current state.
+         */
+        resetPersonalInfo: (state) => {
+            state.firstName = "";
+            state.secondName = "";
+            state.jobTitle = "";
+            state.photo = "";
+            state.address = "";
+            state.phone = "";
+            state.email = "";
+            state.about = "";
+        },
     },
 });
 
@@ -74,6 +88,7 @@ export const {
     setPhone,
     setEmail,
     setAbout,
+    resetPersonalInfo,
 } = personalInfoSlice.actions;
 
 /**
