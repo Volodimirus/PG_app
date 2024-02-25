@@ -30,8 +30,17 @@ export default function PgForm(): JSX.Element {
             <div className="pg_form__buttons flex flex-column">
                 <button
                     type="reset"
-                    className="pg_form__reset_btn w-100 fs-4 lh-lg"
-                    onClick={resetFormDetails}>Reset</button>
+                    className="pg_form__btn reset w-100 fs-4 lh-lg"
+                    onClick={resetFormDetails}
+                >
+                    Reset
+                </button>
+                <button
+                    type="button"
+                    className="pg_form__btn pdf w-100 fs-4 lh-lg"
+                >
+                    Generate PDF
+                </button>
             </div>
         </form>
     );
