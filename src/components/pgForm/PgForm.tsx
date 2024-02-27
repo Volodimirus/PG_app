@@ -12,7 +12,7 @@ import "./PgForm.css";
  * Renders the PgForm component.
  * @returns The PgForm component.
  */
-export default function PgForm(): JSX.Element {
+export default function PgForm(props: any): JSX.Element {
     const dispatch = useDispatch();
 
     // Reset the personal info form.
@@ -38,6 +38,7 @@ export default function PgForm(): JSX.Element {
                 <button
                     type="button"
                     className="pg_form__btn pdf w-100 fs-4 lh-lg"
+                    onClick={props.handlePrint}
                 >
                     Generate PDF
                 </button>
