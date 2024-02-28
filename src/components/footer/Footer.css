@@ -1,6 +1,5 @@
 .app_footer {
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
+    padding: 0 1.25rem;
     background-color: rgb(31, 41, 55);
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
@@ -18,9 +17,7 @@
     height: 2rem;
     background-image: url(https://lively-begonia-680727.netlify.app/assets/github-4e4107f7.svg);
     cursor: pointer;
-    transition: all;
-    transition-duration: 0.2s;
-    transition-timing-function: ease-in-out;
+    transition: 0.2s opacity ease-in-out;
 }
 
 .app_footer__github:hover {
