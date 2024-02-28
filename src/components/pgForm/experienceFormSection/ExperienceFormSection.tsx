@@ -16,6 +16,16 @@ export default function ExperienceFormSection(): JSX.Element {
         });
     const [isOpen, toggleOpen] = useState<boolean>(false);
 
+    const resetExperienceDetails = () => {
+        setExperienceDetails({
+            position: "",
+            company: "",
+            city: "",
+            fromYear: 0,
+            toYear: 0,
+        });
+    }
+
     const dispatch = useDispatch();
 
     return (
@@ -42,13 +52,7 @@ export default function ExperienceFormSection(): JSX.Element {
                     type="button"
                     className="w-100 fs-4 px-3"
                     onClick={() => {
-                        setExperienceDetails({
-                            position: "",
-                            company: "",
-                            city: "",
-                            fromYear: 0,
-                            toYear: 0,
-                        });
+                        resetExperienceDetails()
 
                         toggleOpen(false);
                     }}
@@ -74,13 +78,7 @@ export default function ExperienceFormSection(): JSX.Element {
 
                         toggleOpen(false);
 
-                        setExperienceDetails({
-                            position: "",
-                            company: "",
-                            city: "",
-                            fromYear: 0,
-                            toYear: 0,
-                        });
+                        resetExperienceDetails()
                     }
                 }}
             >
