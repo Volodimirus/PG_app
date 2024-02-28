@@ -16,6 +16,17 @@ export default function EducationDetailsFormSection() {
     });
     const [isOpen, toggleOpen] = useState<boolean>(false);
 
+    const resetEducationDetails = () => {
+        setEducationDetails({
+            university: "",
+            degree: "0",
+            fromYear: 0,
+            toYear: 0,
+            city: "",
+            subject: ""
+        })
+    }
+
     const dispatch = useDispatch();
 
     return (
@@ -40,14 +51,7 @@ export default function EducationDetailsFormSection() {
                     type="button"
                     className="w-100 fs-4 px-3"
                     onClick={() => {
-                        setEducationDetails({
-                            university: "",
-                            degree: "",
-                            city: "",
-                            subject: "",
-                            fromYear: 0,
-                            toYear: 0,
-                        });
+                        resetEducationDetails()
 
                         toggleOpen(false);
                     }}
@@ -70,14 +74,7 @@ export default function EducationDetailsFormSection() {
 
                     toggleOpen(false);
 
-                    setEducationDetails({
-                        university: "",
-                        degree: "",
-                        fromYear: 0,
-                        toYear: 0,
-                        city: "",
-                        subject: ""
-                    });
+                    resetEducationDetails();
                 }
             }}
             >Add</button>
