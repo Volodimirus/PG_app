@@ -1,6 +1,6 @@
 import React from "react";
-import type { RootState } from "../../../redux/store";
 import { useSelector } from "react-redux";
+import type { RootState } from "../../../redux/store";
 import "./PortfolioAside.css";
 
 /**
