@@ -32,7 +32,7 @@ export default function EducationDetailsFormSection() {
     return (
         <fieldset className="pg_form__section education d-flex flex-column">
             <legend className="fs-4 lh-lg">Education</legend>
-            {isOpen ? educationItemsInfo.map(({ type, name, placeholder }) => {
+            {isOpen ? educationItemsInfo.map(({ type, name, placeholder }, i) => {
                 return (
                     <FormSectionField
                         type={type}
@@ -44,6 +44,7 @@ export default function EducationDetailsFormSection() {
                                 [`${name}`]: value,
                             });
                         }}
+                        key={i}
                     />)
             }) : null}
             {isOpen ? (

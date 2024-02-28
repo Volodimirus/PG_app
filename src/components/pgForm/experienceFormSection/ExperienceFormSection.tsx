@@ -31,7 +31,7 @@ export default function ExperienceFormSection(): JSX.Element {
     return (
         <fieldset className="pg_form__section experience d-flex flex-column">
             <legend className="fs-4 lh-lg">Experience</legend>
-            {isOpen ? experienceItemsInfo.map(({ type, name, placeholder }) => (
+            {isOpen ? experienceItemsInfo.map(({ type, name, placeholder }, i) => (
                 <>
                     <FormSectionField
                         type={type}
@@ -43,6 +43,7 @@ export default function ExperienceFormSection(): JSX.Element {
                                 [`${name}`]: value,
                             });
                         }}
+                        key={i}
                     />
                 </>
             )

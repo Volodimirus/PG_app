@@ -16,7 +16,6 @@ import {
  */
 
 export default function PersonalDetailsFormSection(): JSX.Element {
-
     return (
         <fieldset className="pg_form__section personal_info d-flex flex-column">
             <legend className="fs-4 lh-lg">Personal Information</legend>
