@@ -42,7 +42,7 @@ export default function PortfolioMain(): JSX.Element {
                                         <h4 className="experience__job fs-5">
                                             {item?.position}
                                         </h4>
-                                        <p className="experience__city_and_company fs-5">
+                                        <p className="experience__city_and_company lh-normal fs-5">
                                             {item?.company}, {item?.city}
                                         </p>
                                     </div>
@@ -66,8 +66,8 @@ export default function PortfolioMain(): JSX.Element {
                                         {item?.university ? item.university : "univercity"},
                                         {item?.city ? item.city : "city"}
                                     </h4>
-                                    <p className="education__degree fs-5">Degree: {item?.degree ? item.subject : "-"}</p>
-                                    <p className="education__subject fs-5">Subject: {item?.subject ? item.subject : "-"}</p>
+                                    <p className="education__degree lh-base fs-5">Degree: {item?.degree ? item.subject : "-"}</p>
+                                    <p className="education__subject lh-base fs-5">Subject: {item?.subject ? item.subject : "-"}</p>
                                 </div>
                             </div>
                         )
