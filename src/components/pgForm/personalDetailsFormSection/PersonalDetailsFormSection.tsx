@@ -1,5 +1,5 @@
 import React from "react";
-import PersonalDetailsFormSectionField from "../formSectionField/FormSectionField";
+import FormSectionField from "../formSectionField/FormSectionField";
 import {
     setFirstName,
     setSecondName,
@@ -20,49 +20,49 @@ export default function PersonalDetailsFormSection(): JSX.Element {
     return (
         <fieldset className="pg_form__section personal_info d-flex flex-column">
             <legend className="fs-4 lh-lg">Personal Information</legend>
-            <PersonalDetailsFormSectionField
+            <FormSectionField
                 type="text"
                 name="firstName"
                 placeholder="First Name"
                 action={setFirstName}
             />
-            <PersonalDetailsFormSectionField
+            <FormSectionField
                 type="text"
                 name="lastName"
                 placeholder="Last Name"
                 action={setSecondName}
             />
-            <PersonalDetailsFormSectionField
+            <FormSectionField
                 type="text"
                 name="jobTitle"
                 placeholder="Job Title"
                 action={setJobTitle}
             />
-            <PersonalDetailsFormSectionField
+            <FormSectionField
                 type="url"
                 name="photo"
                 placeholder="Your photo (URL)"
                 action={setPhoto}
             />
-            <PersonalDetailsFormSectionField
+            <FormSectionField
                 type="text"
                 name="address"
                 placeholder="Address"
                 action={setAddress}
             />
-            <PersonalDetailsFormSectionField
+            <FormSectionField
                 type="tel"
                 name="phone"
                 placeholder="Phone Number"
                 action={setPhone}
             />
-            <PersonalDetailsFormSectionField
+            <FormSectionField
                 type="email"
                 name="email"
                 placeholder="Email"
                 action={setEmail}
             />
-            <PersonalDetailsFormSectionField
+            <FormSectionField
                 type="textarea"
                 name="about"
                 placeholder="About yourself"
