@@ -3,6 +3,7 @@ import PersonalDetailsFormSection from "./personalDetailsFormSection/PersonalDet
 import ExperienceFormSection from "./experienceFormSection/ExperienceFormSection";
 import EducationDetailsFormSection from "./educationDetailsFormSection/EducationDetailsForm";
 import { useDispatch } from "react-redux";
+import { useReactToPrint } from "react-to-print";
 import { resetPersonalInfo } from "../../redux/reducers/personalInfoSlice";
 import { resetEducation } from "../../redux/reducers/educationSlice";
 import { resetExperience } from "../../redux/reducers/experienceSlice";
@@ -14,6 +15,11 @@ import "./PgForm.css";
  */
 export default function PgForm(props: any): JSX.Element {
     const dispatch = useDispatch();
+
+    // Triggers print function for portfolio component.
+    const handlePrint = useReactToPrint({
+        content: (): any => props.componentRef.current
+    })
 
     // Reset the personal info form.
     const resetFormDetails = () => {
@@ -38,7 +44,7 @@ export default function PgForm(props: any): JSX.Element {
                 <button
                     type="button"
                     className="pg_form__btn pdf w-100 fs-4 lh-lg"
-                    onClick={props.handlePrint}
+                    onClick={handlePrint}
                 >
                     Generate PDF
                 </button>
