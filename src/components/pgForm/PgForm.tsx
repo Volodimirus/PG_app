@@ -1,9 +1,9 @@
 import React from "react";
+import { useDispatch } from "react-redux";
+import { useReactToPrint } from "react-to-print";
 import PersonalDetailsFormSection from "./personalDetailsFormSection/PersonalDetailsFormSection";
 import ExperienceFormSection from "./experienceFormSection/ExperienceFormSection";
 import EducationDetailsFormSection from "./educationDetailsFormSection/EducationDetailsForm";
-import { useDispatch } from "react-redux";
-import { useReactToPrint } from "react-to-print";
 import { resetPersonalInfo } from "../../redux/reducers/personalInfoSlice";
 import { resetEducation } from "../../redux/reducers/educationSlice";
 import { resetExperience } from "../../redux/reducers/experienceSlice";
